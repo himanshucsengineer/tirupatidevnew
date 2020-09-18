@@ -1,0 +1,352 @@
+/**
+  ===========================================================================
+ * @file: responsive.css
+ *
+ * @brief: This file contains stuff realtead to website responsivenes
+ *
+ *
+ * ============================================================================
+ *
+ * Copyright © Eniacoder, 2020
+ *
+ * This material, including documentation and any related computer programs,is
+ * protected by copyright controlled by Eniacoder.All rights are
+ * reserved.Copying, including reproducing,storing, adapting or translating,any
+ * or all of this material require written consent of Eniacoder.
+ * This material may also contain confidential information,which should not be
+ * disclosed to others without prior written consent of Eniacoder.
+ *
+ * ============================================================================
+ *
+ * <b> REVISION HISTORY </b>
+ *
+ * @Version 1.0 : 25-MAY-2020 
+ * Author :Himanshu Goyal 
+ *                                          
+ *
+ *
+ *============================================================================
+ */
+
+
+
+
+ @media only screen and (max-width: 380px) {
+  .sidebar_left{
+    width: 25%;
+  }
+  .sidebar_right{
+    width: 75%;
+  }
+
+  
+    
+    .top-nav .refer {
+       height: auto;
+        width: 100px;
+        font-size: 10px;
+      
+      
+        
+      }
+
+      .top-nav p{
+        text-align:center;
+      }
+     .top-nav .earn{
+       margin-left: 130px;
+       margin-top: -20px;
+     }
+    
+    .meu .brk{
+      display: none;
+    }
+            
+    .first .card{
+    /* height : 132px; */
+        padding: 6px;
+      margin: 10px;
+      
+    }
+    .first .flex{
+      width: 100%;
+    }
+    .brands .card{
+      width: 115px;
+      
+    }
+    .health_main{
+      width:90%;
+    }
+
+
+    .health_main button{
+      width: 50%;
+    }
+    .health_main .to{
+      padding-left: 50px;
+    }
+    .health_main .small{
+      width: 80%;
+    }
+    .car{
+      width:90%;
+    }
+    .car button{
+      width: 50%;
+    }
+    .car .to{
+      padding-left: 50px;
+    }
+    .car .small{
+      width: 80%;
+      padding: 5px 17px;  
+    }
+
+    .why p {
+      font-size: 20px;
+      
+      
+      
+      } 
+    .review h3{
+      font-size: 20px;
+    }  
+    .about p {
+      font-size: 20px;
+    }
+    .about h3{
+      font-size: 24px;
+    }
+    .imp p {
+      font-size: 18px;
+    }
+    .why_Health p{
+     font-size: 15px;
+    }
+    .why_Health h4{
+      font-size: 20px;
+      width: 60%;
+    }
+    .why_Health img{
+      width: 80px;
+      height: 80px;
+     
+    }
+    .refer{
+      width: 80%;
+    }
+    .refer .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .refer .fa {
+      padding: 15px;
+      font-size: 15px;
+      width: 20%;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .contect-form .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .contect-form .contact-info .uper-info p{
+      padding-top: 10px;
+      font-size: 20px;
+    }
+    
+  }
+
+
+
+  @media only screen and (max-width: 426px) and (min-width:376px){
+
+    .top-nav p{
+      text-align:center;
+    }
+    .meu .brk{
+      display: none;
+    }
+    .sidebar_left{
+      width: 25%;
+    }
+    .sidebar_right{
+      width: 75%;
+    }
+    .brands .card{
+      width: 140px;
+      
+    }
+    .first .card{
+      /* height : 132px; */
+        /* padding: 12px; */
+      margin: 10px;
+      
+    }
+    
+    .about p {
+      font-size: 20px;
+    }
+    .about h3{
+      font-size: 24px;
+    }
+    .why p {
+      font-size: 20px;
+    } 
+    .contect-form .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .health_main{
+      width:90%;
+    }
+
+
+    .health_main button{
+      width: 50%;
+    }
+    .health_main .to{
+      padding-left: 50px;
+    }
+    .health_main .small{
+      width: 80%;
+    }
+    .car{
+      width:90%;
+    }
+    .car button{
+      width: 50%;
+    }
+    .car .to{
+      padding-left: 50px;
+    }
+    .car .small{
+      width: 80%;
+      padding: 5px 17px;
+    }
+    .review h3{
+      font-size: 20px;
+    }
+    .imp p {
+      font-size: 18px;
+    }
+    .why_Health p{
+     font-size: 15px;
+    }
+    .why_Health h4{
+      font-size: 20px;
+      width: 60%;
+    }
+    .why_Health img{
+      width: 80px;
+      height: 80px;
+     
+    }
+    .refer{
+      width: 80%;
+    }
+    .refer .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .refer .fa {
+      padding: 15px;
+      font-size: 15px;
+      width: 20%;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) and (min-width:768px){
+    .meu .brk{
+      display: none;
+    }
+    .top-nav .earn{
+      margin-left: 130px;
+      margin-top: -25px;
+    }
+    .refer .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .contect-form .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+  }
+
+
+
+  
+@media only screen and (max-width: 600px) {
+
+.first a{
+    width : 50%;
+}
+.contact-width{
+  width : 71%;
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .accordion-section .panel-default .panel-title a:after {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-size: 2rem;
+    content: "-";
+    color: rgb( 111, 111, 111 );
+    float: right;
+    margin-top: -13px;
+   
+  }
+  .accordion-section .panel-default .panel-title a {
+    display: block;
+    
+  text-decoration: none; 
+    font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb( 111, 111, 111 );
+  line-height: 1.1;
+  text-align: left;
+  padding-left: 8px;
+  
+  }
+  .accordion-section .panel-default .panel-body {
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb( 138, 138, 138 );
+    line-height: 1.2;
+    text-align:justify center;
+    }
+  
+}
+
+
+  
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
