@@ -101,9 +101,17 @@
 
 ?>
 <?php 
-        $refering_url = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '' ;
-        $this->session->set_userdata('url', $refering_url);
-        ?>
+       if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')   
+       $url = "https://";   
+  else  
+       $url = "http://";   
+  // Append the host(domain name, ip) to the URL.   
+  $url.= $_SERVER['HTTP_HOST'];   
+  
+  // Append the requested resource location to the URL   
+  $url.= $_SERVER['REQUEST_URI'];    
+  $_SESSION['url'] =$url;
+?>
    <div class="box">
       <div class="form loginBox">
       <form method="post" action="<?php echo base_url() ; ?>frontend/login/login">

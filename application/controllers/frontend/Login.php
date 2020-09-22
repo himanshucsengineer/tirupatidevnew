@@ -15,7 +15,7 @@
         }
 
         public function login(){
-            $url=$this->session->userdata('url');
+            $url = $_SESSION['url']; 
             $this->load->model('frontend/ReferandEarnmodel');
             $model_data=$this->ReferandEarnmodel->fetchModeldata();
             $login_success=0;
@@ -40,7 +40,7 @@
             }
             if($login_success==1){
                 // $this->session->set_flashdata('success','Logged In Successfully'); 
-                redirect($url,'refresh'); 
+                redirect($url); 
             }
             else{
                 $this->session->set_flashdata('error','Wrong Username Or Password'); 

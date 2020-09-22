@@ -50,6 +50,11 @@ margin-top: 30px;
 .log_refer a:hover{
     color: rgb( 95, 96, 96 );
 }
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
 </style>
 <?php
 if(!isset($_SESSION["referid"]))
@@ -60,6 +65,33 @@ else
 {
     $button='<input class="lis" type="text" id="copy" value="'.base_url().'?id='.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder=" " disabled></br>
     <input type="submit" id="copied" value="Copy Link" class="bu"  />';
+}
+?>
+
+
+<?php
+if(!isset($_SESSION["referid"]))
+{
+    $a='<h3><span style="color: rgb( 239, 69, 84 );"><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a></span> to view referral bonus received.</h3>';
+}
+else
+{
+    $a='<h3> You Will receive your referral bonus when your friends confirm their booking with us. Keep inviting!</h3>';
+}
+?>
+
+<?php
+if(!isset($_SESSION["referid"]))
+{
+    $wha='<a class="fa fa-whatsapp disabled"></a>';
+    $fb='<a class="fa fa-facebook disabled"></a>';
+    $twi='<a class="fa fa-twitter disabled"></a>';
+}
+else
+{
+    $wha='<a href="https://api.whatsapp.com/send?text=Hi! I tried Tirupati insurance, here are my thoughts so far. Good experience center, wide range of products. If you want to try them, you can register at '.base_url().'?id='.$_SESSION["referid"].'  they will call you back and take it forward." class="fa fa-whatsapp" data-action="share/whatsapp/share" target="_blank"></a>';
+    $fb='<a href="https://www.facebook.com/sharer.php?text=[ Hi! I tried Tirupati insurance, here are my thoughts so far. Good experience center, wide range of products. If you want to try them, you can register at '.base_url().'?id='.$_SESSION["referid"].'  they will call you back and take it forward.  ]" class="fa fa-facebook" data-action="share/facebook/share" target="_blank"></a>';
+    $twi='<a href="http://twitter.com/share?text=[Hi! I tried Tirupati insurance, here are my thoughts so far. Good experience center, wide range of products. If you want to try them, you can register at '.base_url().'?id='.$_SESSION["referid"].'  they will call you back and take it forward.]&url=[https://tirupatiinsurance.com/]" class="fa fa-twitter" data-action="share/twitter/share" target="_blank"></a>';
 }
 ?>
         <div class="refer-top" style="background-image: url(<?php echo base_url();?>assest/img/refer.jpg)">
@@ -99,9 +131,9 @@ else
                             </div>
                             <h6 style="margin-top:30px; color:rgb( 190, 190, 190 );">And Shared Via:</h6>
                             <div class="text-center">
-                                <a href="#" class="fa fa-facebook"></a>
-                                <a href="#" class="fa fa-twitter"></a>
-                                <a href="#" class="fa fa-whatsapp"></a>
+                            <?php echo $fb; ?>
+                                <?php echo $wha; ?>
+                                <?php echo $twi; ?>
                             </div>
                         </div>  
                     </div>    
@@ -151,9 +183,96 @@ else
     </div>
     <div class="log_refer">
         <div class="container">
-            <h3><span style="color: rgb( 239, 69, 84 );"><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a></span> to view referral bonus received.</h3>
+        <?php echo $a; ?>
         </div>
     </div>
+
+    <div class="h_box">
+          <section class="bg-white accordion-section clearfix mt-3 faq" aria-label="Question Accordions">
+            <div class="container">
+            
+                <h2 style="text-align: center; font-weight:400;">Frequently Asked  </h2>
+                
+                <div class="container qes">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                  <div class="panel panel-default">
+                    <div class="panel-heading p-3 mb-3 " style="border-bottom: 1px solid grey; border-radius:0px;" role="tab" id="heading0">
+                      <h3 class="panel-title">
+                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                          When am i eligible for getting the referral bouns?
+                        </a> 
+                      </h3>
+                    </div>
+                    <div class="container">
+                      <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
+                        <div class="panel-body px-3 mb-4">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="panel panel-default">
+                    <div class="panel-heading p-3 mb-3" style="border-bottom: 1px solid grey; border-radius:0px;" role="tab" id="heading1">
+                      <h3 class="panel-title">
+                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            How will i get my referral bouns?
+                        </a>
+                      </h3>
+                    </div>
+                    <div class="container">
+                    <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
+                      <div class="panel-body px-3 mb-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </div>
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="myModal1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                <h6 class='text-success text-center'>OOPS!! You can select upto 3 adults</h6>
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" id="myModal2">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                <h6 class='text-success text-center'>OOPS!! Please select adult first</h6>
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+</section>
+ </div>
     <script>
         $( '#copied' ).click( function()
  {
