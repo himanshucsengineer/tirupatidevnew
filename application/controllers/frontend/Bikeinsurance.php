@@ -49,9 +49,12 @@ public function renewbikeDetails(){
     $this->form_validation->set_rules('varnt', 'Varient', 'required');
     $this->form_validation->set_rules('pexre', 'Policy Expire', 'required');
     $this->form_validation->set_rules('piur', 'Policy Insurer', 'required');
+    $this->form_validation->set_rules('mail', '', 'required');
+    $this->form_validation->set_rules('mob', '', 'required');
+    
 
     
-    $name =array("Registration Number","Maufacturer Id","Fuel Type","Registration Year","Previous Policy","Modal Id","Policy Expire","Previous Insurer");
+    $name =array("Registration Number","Maufacturer Id","Fuel Type","Registration Year","Previous Policy","Modal Id","Policy Expire","Previous Insurer","Email","Mobile number");
     if ($this->form_validation->run()){ 
 
 
@@ -65,6 +68,9 @@ public function renewbikeDetails(){
         'variant_id' => $this->input->post('varnt'),
         'policy_expire' => $this->input->post('pexre'),
         'prev_insurer' => $this->input->post('piur'),
+        'email' => $this->input->post('mail'),
+        'mob' => $this->input->post('mob'),
+        
     );
   
     if($this->Bikemodel->bike_data($data)){
@@ -87,21 +93,29 @@ public function newBike(){
     $this->load->model('frontend/Bikemodel');
     $this->input->post('formSubmit');
 
+    $this->form_validation->set_rules('reg', 'Registration', 'required');
     $this->form_validation->set_rules('compa', 'Company Name', 'required');
     $this->form_validation->set_rules('fultype', 'Fuel Type', 'required');
     $this->form_validation->set_rules('regisyr', 'Registrtion Year', 'required');
     $this->form_validation->set_rules('moda', 'Modal', 'required');
+   
     $this->form_validation->set_rules('varnt', 'Varient', 'required');
-    $this->form_validation->set_rules('pexre', 'Policy Expire', 'required');
-    $name =array("Maufacturer Id","Fuel Type","Registration Year","Modal Id","Variant Id","Policy Expire");
+    
+    $this->form_validation->set_rules('mob', '', 'required');
+    $this->form_validation->set_rules('mail', '', 'required');
+
+    $name =array("Registration Number","Maufacturer Id","Fuel Type","Registration Year","Modal Id","Variant Id","Email","Mobile number");
     if ($this->form_validation->run()){ 
         $data = array(
+            'registration_no' => $this->input->post('reg'),
             'maufacturer_id' => $this->input->post('compa'),
             'fuel_type' => $this->input->post('fultype'),
             'registration_year' => $this->input->post('regisyr'),
             'modal_id' => $this->input->post('moda'),
             'variant_id' => $this->input->post('varnt'),
-            'policy_expire' => $this->input->post('pexre'),
+            'email' => $this->input->post('mail'),
+            'mob' => $this->input->post('mob'),
+        
         );
         
         if($this->Bikemodel->bike_data($data)){

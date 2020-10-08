@@ -696,7 +696,7 @@ margin-top: 15px;
 }
 
 
-.health_main .date input[type=text], input[type=number],input[type=email]{
+.health_main .date input[type=text], input[type=number],input[type=email], input[type=date]{
 width: 100%;
 border-top: none;
 padding-left: 15px;

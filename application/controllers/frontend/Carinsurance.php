@@ -47,7 +47,9 @@
         $this->form_validation->set_rules('vari', 'Varient', 'required');
         $this->form_validation->set_rules('policy_expire', 'Policy Expire', 'required');
         $this->form_validation->set_rules('pinsur', 'Policy Insurer', 'required');
-        $name =array("Registration Number","Company","Fuel Type","Registration Year","Modal","Policy Type","Varieny","Policy Expire","Policy Insurer");
+        $this->form_validation->set_rules('mob', '', 'required');
+        $this->form_validation->set_rules('mail', '', 'required');
+        $name =array("Registration Number","Company","Fuel Type","Registration Year","Modal","Policy Type","Varieny","Policy Expire","Policy Insurer","Email","Mobile number");
         if ($this->form_validation->run()){ 
         $data = array(
             'registration_no' => $this->input->post('registraion'),
@@ -59,6 +61,9 @@
             'variant_id' => $this->input->post('vari'),
             'policy_expire' => $this->input->post('policy_expire'),
             'prev_insurer' => $this->input->post('pinsur'),
+            
+        'email' => $this->input->post('mail'),
+        'mob' => $this->input->post('mob'),
         );
 
             if($this->Carmodel->car_data($data)){
@@ -80,21 +85,35 @@
     public function newCar(){
         $this->load->model('frontend/Carmodel');
         $this->input->post('formSubmit');
+        
+        
+        $this->form_validation->set_rules('registraion', 'Registration', 'required');
         $this->form_validation->set_rules('company', 'Company Name', 'required');
         $this->form_validation->set_rules('fuel_type', 'Fuel Type', 'required');
         $this->form_validation->set_rules('regyr', 'Registrtion Year', 'required');
-        $this->form_validation->set_rules('modal', 'Modal', 'required');
+        $this->form_validation->set_rules('model', 'Modal', 'required');
+       
         $this->form_validation->set_rules('vari', 'Varient', 'required');
-        $this->form_validation->set_rules('policy_expire', 'Policy Expire', 'required');
-        $name =array("Company","Fuel Type","Registration Year","Modal Id","Variant Id","Policy Expire");
+        
+       
+        $this->form_validation->set_rules('mob', '', 'required');
+        $this->form_validation->set_rules('mail', '', 'required');
+        $name =array("Registration Number","Company","Fuel Type","Registration Year","Modal Id","Variant Id","Email","Mobile number");
         if ($this->form_validation->run()){ 
             $data = array(
-                'maufacturer_id' => $this->input->post('company'),
-                'fuel_type' => $this->input->post('fuel_type'),
-                'registration_year' => $this->input->post('regyr'),
-                'modal_id' => $this->input->post('modal'),
-                'variant_id' => $this->input->post('vari'),
-                'policy_expire' => $this->input->post('policy_expire'),
+                
+                'registration_no' => $this->input->post('registraion'),
+            'maufacturer_id' => $this->input->post('company'),
+            'fuel_type' => $this->input->post('fuel_type'),
+            'registration_year' => $this->input->post('regyr'),
+            
+            'modal_id' => $this->input->post('model'),
+            'variant_id' => $this->input->post('vari'),
+            
+            
+            
+        'email' => $this->input->post('mail'),
+        'mob' => $this->input->post('mob'),
             );
             
             

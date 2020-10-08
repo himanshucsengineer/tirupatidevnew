@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
 if(isset($_GET["id"]))
 {
@@ -78,19 +65,21 @@ else
               <div class="row">
 
                 <div class="col-md-6">
-                  <div class="date " >
+                  <div class="date">
                     <label class="adults" for="usr">Adults</label>
-                   
-                    <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 years and above">
+                    <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="No. of Adults ">
                                                                     
                   </div>
                   <div id="firstperson" style="display:none" class="form-group date"> 
                     <label class="adults" for="usr">Adults 1 DOB</label>
-                    <input type="text"  id="usr" name="fdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                   <input type="text" name="fdob" id="my_date_picker"  placeholder="DD-MM-YYYY" class="lis" readonly required />
+                    <!--input type="text"  id="my_date_picker" placeholder="DD-MM-YYYY" name="fdob" class="lis"  required-->
                   </div>
                   <div id="secondperson" style="display:none" class="form-group date">
                     <label class="adults" for="usr">Adults 2 DOB</label>
-                    <input type="text"  id="usr" name="sdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                    <input type="text" name="sdob" id="my_date_picker2"  placeholder="DD-MM-YYYY" class="lis" readonly required />
+                    <!--input type="text"  id="my_date_picker2" placeholder="DD-MM-YYYY" name="sdob" class="lis"  required-->
+                    
                   </div>
                 </div>
                  
@@ -99,7 +88,7 @@ else
                 
                   <div class="date">
                     <label class="adults" for="usr">Kids</label>
-                    <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="knum" placeholder="Kids(3months - 20 years)">
+                    <input type="number" oninput="getkid()" min="1" max="2" id="usrkid" name="knum" placeholder="No. of Kids(3months - 20 years)">
                   </div>
                   
                 </div>  
@@ -109,7 +98,7 @@ else
                 <div class="col-md-6">
                   <div class="form-group date">
                     <label class="adults" for="usr">Mobile number</label>
-                    <input type="text"  id="" name="mob" placeholder="Enter Mobile number">
+                    <input type="text" id="numb" name="mob" placeholder="Enter Mobile number">
                   </div>
                 </div> 
                 <div class="col-md-6">
@@ -214,7 +203,7 @@ else
                 <div class="container qes">
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                   <div class="panel panel-default">
-                    <div class="panel-heading p-4 mb-3" role="tab" id="heading0">
+                    <div class="panel-heading p-2 mb-3" role="tab" id="heading0">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
                           What sort of businesses do your work with?
@@ -232,7 +221,7 @@ else
                   </div>
                   
                   <div class="panel panel-default">
-                    <div class="panel-heading p-4 mb-3" role="tab" id="heading1">
+                    <div class="panel-heading p-2 mb-3" role="tab" id="heading1">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
                           What services does Tirupati Insurance Provide?
@@ -249,7 +238,7 @@ else
                   </div>
                   
                   <div class="panel panel-default">
-                    <div class="panel-heading p-4 mb-3" role="tab" id="heading2">
+                    <div class="panel-heading p-2 mb-3" role="tab" id="heading2">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
                           What locations do you service and what are your hours of operation?
@@ -266,7 +255,7 @@ else
                   </div>
                   
                   <div class="panel panel-default">
-                    <div class="panel-heading p-4 mb-3" role="tab" id="heading3">
+                    <div class="panel-heading p-2 mb-3" role="tab" id="heading3">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
                           What competitive advantage does Tirupati Insurance offer it's clients ?
@@ -374,10 +363,4 @@ else
             }
           }
           </script>
-
-
-
-
-
-
                      </div> 

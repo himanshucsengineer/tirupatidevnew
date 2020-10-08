@@ -108,6 +108,8 @@ img {
                     <th>Policy Expiry</th>
                     <th>Previous policy type</th>
                     <th>policy insurer</th>
+                    <th>Email</th>
+                    <th>Contact no.</th>
                     <th>Action</th>
 
 

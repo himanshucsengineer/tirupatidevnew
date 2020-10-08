@@ -12,22 +12,37 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assest/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assest/css/responsive.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link href= 
-'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
-          rel='stylesheet'> 
-      
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        
+        
+        
+        <script>
+$(function() {
+  $("#my_date_picker").daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
     
-      
-    <script src= 
-"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" > 
-    </script>
-    <script> 
-        $(document).ready(function() { 
-          
-            $(function() { 
-                $( "#my_date_picker" ).datepicker(); 
-            }); 
-        }) 
-    </script> 
+  });
+});
+</script>
+<script>
+$(function() {
+  $("#my_date_picker2").daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+    
+  });
+});
+</script>
   
     </head>

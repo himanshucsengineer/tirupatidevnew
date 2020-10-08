@@ -138,7 +138,8 @@ else
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="pexpie">Select Policy Expire</label>
-                                        <input type="text"  id="my_date_picker" placeholder="DD-MM-YYYY" name="policy_expire" class="lis" readonly required>
+                                        <input type="text" name="pexre" id="my_date_picker"  placeholder="DD-MM-YYYY" class="lis" readonly required />
+                                        <!--input type="text"  id="my_date_picker" placeholder="DD-MM-YYYY" name="policy_expire" class="lis" readonly required-->
                                     </div>
                                 </div>
                             </div>  
@@ -193,13 +194,13 @@ else
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                                 <label class="adults" for="regyrs">Email</label>
-                                                <input  type="text" class="lis"  name="email" placeholder="Email">
+                                                <input  type="text" class="lis"  name="mail" placeholder="Email">
                                     </div>
                                 </div>   
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Contact no.</label>
-                                        <input type="text" class="lis" placeholder="Contact no." name="contact">
+                                        <input type="text" class="lis" placeholder="Contact no." name="mob">
 
                                     </div>
                                 </div> 
@@ -222,7 +223,7 @@ else
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                     <label class="adults" >Registration</label>
-                                                <input  type="text" class="lis"  name="registration" placeholder="Enter Registration">
+                                                <input  type="text" class="lis"  name="reg" placeholder="Enter Registration">
   
   
                                                 
@@ -296,13 +297,13 @@ else
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                                 <label class="adults" for="regyrs">Email</label>
-                                                <input  type="text" class="lis"  name="email" placeholder="Email">
+                                                <input  type="text" class="lis"  name="mail" placeholder="Email">
                                     </div>
                                 </div>   
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Contact no.</label>
-                                        <input type="text" class="lis" placeholder="Contact no." name="contact">
+                                        <input type="text" class="lis" placeholder="Contact no." name="mob">
 
                                     </div>
                                 </div> 
