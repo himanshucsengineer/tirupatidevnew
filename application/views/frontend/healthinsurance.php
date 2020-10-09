@@ -72,12 +72,12 @@ else
                   </div>
                   <div id="firstperson" style="display:none" class="form-group date"> 
                     <label class="adults" for="usr">Adults 1 DOB</label>
-                   <input type="text" name="fdob" id="my_date_picker"  placeholder="DD-MM-YYYY" class="lis" readonly required />
+                   <input type="text" name="fdob" id="my_date_picker"  placeholder="DD-MM-YYYY" class="lis"  required />
                     <!--input type="text"  id="my_date_picker" placeholder="DD-MM-YYYY" name="fdob" class="lis"  required-->
                   </div>
                   <div id="secondperson" style="display:none" class="form-group date">
                     <label class="adults" for="usr">Adults 2 DOB</label>
-                    <input type="text" name="sdob" id="my_date_picker2"  placeholder="DD-MM-YYYY" class="lis" readonly required />
+                    <input type="text" name="sdob" id="my_date_picker2"  placeholder="DD-MM-YYYY" class="lis"  required />
                     <!--input type="text"  id="my_date_picker2" placeholder="DD-MM-YYYY" name="sdob" class="lis"  required-->
                     
                   </div>

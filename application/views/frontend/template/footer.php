@@ -27,7 +27,7 @@
             <div class="links">
               <a href="#">covid-19 update/assitance</a></br>
               <a href="#">blog</a></br>
-              <a href="#">privacy</a></br>
+              <a href="<?php echo base_url(); ?>privacy-policy">privacy</a></br>
               <a href="#">terms and condition</a></br>
               <a href="#">code of coduct</a></br>
               <a href="#">agent panel</a></br>

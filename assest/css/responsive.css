@@ -296,6 +296,19 @@
 .contact-width{
   width : 71%;
 }
+.about-main2 .talk{
+  padding-top: 1rem;
+  padding-left:3rem;
+  padding-bottom: 1rem;
+}
+.about-main3 img{
+  width: 100%;
+  height: auto;
+  
+  padding-top: 2rem;
+  padding-bottom: 2rem;  
+}
+
 }
 
 

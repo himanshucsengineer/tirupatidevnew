@@ -51,6 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'home';
 $route['about-us'] = 'frontend/about';
+$route['privacy-policy'] = 'frontend/policy';
 $route['contact-us'] = 'frontend/contactus';
 $route['health-insurance'] = 'frontend/healthinsurance';
 $route['car-insurance'] = 'frontend/carinsurance';

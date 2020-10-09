@@ -138,7 +138,7 @@ else
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="pexpie">Select Policy Expire</label>
-                                        <input type="text" name="pexre" id="my_date_picker"  placeholder="DD-MM-YYYY" class="lis" readonly required />
+                                        <input type="text" name="pexre" id="my_date_picker"  placeholder="DD-MM-YYYY" class="lis"  required />
                                         <!--input type="text"  id="my_date_picker" placeholder="DD-MM-YYYY" name="policy_expire" class="lis" readonly required-->
                                     </div>
                                 </div>
