@@ -18,6 +18,28 @@
 public function contactDetails(){
     $this->load->model('frontend/Contactmodel');
     $this->input->post('formSubmit');
+    $this->load->config('email');
+        $this->load->library('email');
+       // $refer = '.base_url().'?id='.$_SESSION["referid"].';
+        $from = $this->config->item('smtp_user');
+        $to = 'vikaspoonia17@gmail.com';
+        $subject = "Contact Data";
+        $message = "<p>Name: ".$this->input->post('name')."</p>
+                    <p>Email: ".$this->input->post('mail')."</p>
+                    <p>Number: ".$this->input->post('tel')."</p>
+                    <p>Insurance pack: ".$this->input->post('pack')."</p>
+                    <p>company: ".$this->input->post('comp')."</p>
+                    <p>Message: ".$this->input->post('text')."</p>
+                  ";
+
+        $this->email->set_newline("\r\n");
+        $this->email->from($from);
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
+    
+    
+    
     $this->form_validation->set_rules('name', 'Name', 'required');
     $this->form_validation->set_rules('mail', 'Email', 'required');
     $this->form_validation->set_rules('tel', 'Phone', 'required|regex_match[/^[0-9]{10}$/]');
@@ -36,7 +58,7 @@ public function contactDetails(){
         'text' => $this->input->post('text')
         );
     
-        if($this->Contactmodel->contact_data($data)){
+        if($this->Contactmodel->contact_data($data) && $this->email->send()){
         $array = array(
             'error'   => false,
             'success' => 'Our Team Will Soon Contact You'

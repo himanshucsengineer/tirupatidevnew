@@ -230,7 +230,4 @@ $('#formSubmit').click(function() {
     return false;
 });
 </script>
-<script>
-$( "#lowinventory" ).append( $( "<tr><td>sexxxx</td><td>yessss</td></tr>" ) );
-</script>
 

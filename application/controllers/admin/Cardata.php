@@ -10,6 +10,9 @@
         }
               
         public function index(){
+            
+            
+            
             $this->load->view('admin/template/header');
             $this->load->view('admin/template/sidebar');
             $this->load->view('admin/template/topbar');
@@ -17,6 +20,8 @@
             $this->load->view('admin/template/footer');
         }
         
+        
+       
         public function addinventory_api(){
 
             $getPurchaseData = $this->cardatamodel->fetchinventory_api();
@@ -30,6 +35,33 @@
                 }
                  echo json_encode(array('data'=>$arrya_json));
             }
+            
+            
+            
+             public function export(){
+            $file_name = 'Car_Data'.'.csv';
+            header("Content-Description: File Transfer");
+            header("Content-Disposition: attachment; filename=$file_name");
+            header("Content-Type: application/csv");
+            
+            $getPurchaseData = $this->cardatamodel->fetchinventory_api();
+            
+            $file = fopen('php://output','w');
+            
+            $header = array("Sr no", "Registration number", "manufacturer", "modal", "variant", "fule type", "registration year", "policy expire", "previous policy", "privious insurer", "email", "mobile number");
+            
+            fputcsv($file, $header);
+            
+            foreach ($getPurchaseData as $key => $value) { 
+                    fputcsv($file, $value);                
+
+                
+            }
+            fclose($file);
+            exit;
+                
+            
+        }
             
             public function deletecardetail(){ 
     

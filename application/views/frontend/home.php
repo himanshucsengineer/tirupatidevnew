@@ -1,3 +1,18 @@
+<head>
+<meta name = "description" content ="Tirupati insurance is No.1 Inusrance agency in hisar, Haryana, which provides health insurance, car insurance, bike insurance,Travel Insurance, Term Insurance ">
+   <meta name = "keywords" content = "Insurance agency in hisar" >
+   <meta name = "robots" content =" index, follow" >
+   <title>Tirupti Insurance - Insurance agency in Hisar, Haryana</title>
+
+</head>
+
+
+
+
+
+
+
+
 <?php
 if(isset($_GET["id"]))
 {
@@ -12,10 +27,10 @@ else
    $referid="No Refer Id Present";
 }
 ?>
-<div class="d-inline-block container-fluid banner-padding" style="padding-bottom:30px;">
+<div class="d-inline-block container-fluid banner-padding" style="padding-bottom:10px;">
     <div class="container first ">
       
-      <p style="margin-top:30px; margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best Qoutes for you </p>
+      <p style="margin-top:15px; margin-bottom:15px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best Qoutes for you </p>
       
         <div class="flex justify-content-center">
           
@@ -31,7 +46,7 @@ else
             </div>
           </div>
         </a>
-        <a  href="<?php echo base_url(); ?>frontend/term">
+        <a  href="<?php echo base_url(); ?>term-insurance">
           <div class="card">
             <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Term Insurance" src="<?php echo base_url()?>assest/img/term.svg">
@@ -59,7 +74,7 @@ else
         <a href="<?php echo base_url()?>bike-insurance">
           <div class="card">
             <div class="card-image text-center p-3">
-              <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/bike.svg">
+              <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/bike-insu.svg">
 
             </div>
     
@@ -68,7 +83,7 @@ else
             </div>
           </div>
         </a>
-        <a  href="<?php echo base_url(); ?>frontend/travel">
+        <a  href="<?php echo base_url(); ?>travel-insurance">
           <div class="card">
             <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Travel Insurance" src="<?php echo base_url()?>assest/img/travel-insurance.svg">
@@ -186,7 +201,7 @@ else
 						 <div class="carousel-inner ">
 							<div class="carousel-item active ">
               <div class="flex justify-content-center ">
-        <?php for($i=0; $i<4; $i++) {?>
+        <?php for($i=0; $i<5; $i++) {?>
           <div class="card">
             <div class="card-image">
             <img src="<?=$brandslogo[$i]->image;?>" >
@@ -197,7 +212,7 @@ else
           </div>
           <div class="carousel-item">
           <div class="flex justify-content-center ">
-        <?php for($i=0; $i<4; $i++) {?>
+        <?php for($i=2; $i<7; $i++) {?>
           <div class="card">
             <div class="card-image">
             <img src="<?=$brandslogo[$i]->image;?>" >

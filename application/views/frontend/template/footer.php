@@ -14,24 +14,23 @@
             <h5>products</h5>
             <hr class="style1">
             <div class="links">
-              <a href="<?php echo base_url()?>frontend/healthinsurance">Health insurance</a></br>
-              <a href="<?php echo base_url()?>frontend/term">Term insurance</a></br>
-              <a href="<?php echo base_url()?>frontend/bikeinsurance">Bike insurance</a></br>
-              <a href="<?php echo base_url()?>frontend/carinsurance">Car insurance</a></br>
-              <a href="<?php echo base_url()?>frontend/travel">Travel insurance</a></br>
+              <a href="<?php echo base_url()?>health-insurance">Health insurance</a></br>
+              <a href="<?php echo base_url()?>term-insurance">Term insurance</a></br>
+              <a href="<?php echo base_url()?>bike-insurance">Bike insurance</a></br>
+              <a href="<?php echo base_url()?>car-insurance">Car insurance</a></br>
+              <a href="<?php echo base_url()?>travel-insurance">Travel insurance</a></br>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <h5>quick links</h5>
             <hr class="style1">
             <div class="links">
-              <a href="#">covid-19 update/assitance</a></br>
-              <a href="#">blog</a></br>
-              <a href="<?php echo base_url(); ?>privacy-policy">privacy</a></br>
-              <a href="#">terms and condition</a></br>
-              <a href="#">code of coduct</a></br>
-              <a href="#">agent panel</a></br>
-              <a href="#">site map</a></br>
+              
+              <a href="<?php echo base_url(); ?>blog">Blog</a></br>
+              <a href="<?php echo base_url(); ?>privacy-policy">Privacy-Policy</a></br>
+              <a href="<?php echo base_url(); ?>career">Career</a></br>
+              <a href="<?php echo base_url(); ?>refer-earn">Refer and Earn</a></br>
+              <a href="<?php echo base_url(); ?>sitemap">Site map</a></br>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
@@ -71,7 +70,7 @@
                       <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php }?>
             </div>
 
-        <p class="reserved">@<?php echo date("Y"); ?> Tirupati Insurance All Rights Reserved. Developed By <span><a href="#" class="lik">Hisar Fever</a></span></p>
+        <p class="reserved">@<?php echo date("Y"); ?> Tirupati Insurance All Rights Reserved. Developed By <span><a href="https://www.hisarfever.com/" class="lik">Hisar Fever</a></span></p>
       </div>
     </section>  
     <div class="modal fade login" id="loginModal">
@@ -137,7 +136,7 @@
 </div>
                     <div class="modal-footer">
                         <div class="forgot login-footer">
-                        <span style="float: left;"><a href="">Forgot password?</a> </span>
+                        <span style="float: left;"><a href="<?php echo base_url();?>frontend/forgetpass">Forgot password?</a> </span>
                             <span style="float: right;">Looking to
                                  <a href="javascript: showRegisterForm();">create an account</a>
                             ?</span>

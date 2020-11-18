@@ -15,14 +15,14 @@ class Callbackdatamodel extends CI_Model{
 
         //return $getuser = $this->db->select('*')->from('tbl_subject')->get()->result();
     }*/
-    public function fetchcall_api() {
+    public function fetchinventory_api() {
       //$deleteid='1';
       //$this->db->where('delete_status',$deleteid);
       $this->db->select('insurance_type.*,call_back.*');
       $this->db->from('call_back');
       $this->db->join('insurance_type','insurance_type.id=call_back.service','left');
       $query = $this->db->get();
-      return $query->result();
+      return $query->result_array();
 
 
       //return $getuser = $this->db->select('*')->from('tbl_subject')->get()->result();

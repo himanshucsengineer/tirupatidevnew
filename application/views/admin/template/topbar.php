@@ -165,16 +165,16 @@ $data= $CI->auth_users->profileget();
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Welcome!! <span><?php echo $data[0]->staff_name?></span></span>
-                <img class="img-profile rounded-circle" src="<?php echo $data[0]->image ?>">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 large" style="font-size:18px;">Welcome!! <span><?php echo $data[0]->staff_name?></span></span>
+                <img style="width:50px; height:50px;" class="img-profile rounded-circle" src="<?php echo $data[0]->image ?>">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in bg-dark" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="<?php echo base_url();?>admin/profile">
+                <a style="font-size:15px;" class="dropdown-item" href="<?php echo base_url();?>admin/profile">
                   <i class="fas fa-user fa-sm fa-fw mr-2 "></i>
                   Profile
                 </a>
-                <a class="dropdown-item" href="<?php echo base_url();?>Login/logoutVendor">
+                <a style="font-size:15px;" class="dropdown-item" href="<?php echo base_url();?>Login/logoutVendor">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 "></i>
                   Logout
                 </a>

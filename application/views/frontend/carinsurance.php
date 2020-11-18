@@ -1,3 +1,15 @@
+<head>
+<meta name = "title" content ="Car Insurance In Hisar - Campare Rate from 20+ Companies">
+<meta name = "description" content ="if you are looking for Car Insurance agent in Hisar then You are at right Place, Now camapare rate from 20+ comapnies ">
+   <meta name = "keywords" content = "Car Insurance in Hisar, Car Insurance agent in Hisar" >
+   <meta name = "robots" content =" index, follow" >
+   <title>Car Insurance</title>
+
+</head>
+
+
+
+
 <?php
 if(isset($_GET["id"]))
 {
@@ -68,7 +80,7 @@ else
                             <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('id'=>'carform','method'=>'POST'));?>
                             <div class="row">
                                 <div class="col-md-8">
-                                    <div class="form-group date">
+                                    <div class="form-group date" style="border-bottom:1px solid #cdcdcd !important;">
                                         <label class="adults" for="usr">Registration Number</label>
                                         <input type="text"  id="usr" name="registraion" placeholder="Enter Registration Number">
                                     </div>
@@ -141,7 +153,8 @@ else
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
-                                        <input type="text" name="policy_expire" id="my_date_picker"  placeholder="DD-MM-YYYY" class="lis" required />
+                                        
+                                        <input type="text" name="policy_expire" id="date"  placeholder="DD/MM/YYYY" class="date-format lis" />
                                         <!--input type="text"  id="my_date_picker" placeholder="DD-MM-YYYY" name="policy_expire" class="lis" readonly required-->
 
                                     </div>
@@ -341,8 +354,11 @@ else
         <section class="imp">
             <div class="container">
                 <h2>Importance of Car Insurance</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
-        
+                <p>In this era owning a car has became necessity and it is not a luxury anymore. Everyone wants to own a car. With increasing numbers of motor vehicles on road, accidents have increased with alarming numbers. In India around 5 lakh accidents are reported annually with almost 1.5 lakh deaths in road accidents, which itself shows that having car insurance guards you and your vehicle from uncertainties.
+Having car insurance safeguards your vehicle for all the damages that can occur on road. It reduces your liability towards your vehicle by ensuring that damages are covered in claims.
+Another importance of car insurance is that it is compulsory to have your car insured if you want to drive in India. 
+We at tirupati insurance ensures that you have least liability towards your vehicle by insuring it and giving best deals in the market, and make you more financially stable than ever.</p>
+
             </div>    
 
         </section>
@@ -357,14 +373,14 @@ else
                     
                             <h4>80% discounts</h4>
                             <hr class="style1">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                            <p>We provide insurance deals with upto 80% discount, we analyze the needs of the customers and provide them with best market deals.</p>  
                 
                         </div>
                         <div class="point">
                             <img src="<?= base_url();?>assest/img/faster-icon-png-0.png">
                             <h4>UNBIASED EXPERT ADVISE</h4>
                             <hr class="style1">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                            <p>We make sure that our customers avail all the services they are entitled to. We help them in assisting to clear their claims and receive services in the least time with our expertise.</p>  
                 
                         </div>
                   
@@ -375,14 +391,14 @@ else
                     
                             <h4>EXPRESS CLAIMS SERVICES</h4>
                             <hr class="style1">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                            <p>We treat our customers as our family hence we do not sell the policies for mere commissions, we give our expert advice after thorough study and comparison of customer’s needs.</p>  
                 
                         </div>
                         <div class="point">
                             <img src="<?= base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
                             <h4>24*7 CUSTOMER SUPPORT</h4>
                             <hr class="style1">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                            <p>We believe in complete commitment towards best services for our customers. Therefore we are available 24*7 for providing solution for all the queries.</p>  
                 
                         </div>
                   
@@ -440,14 +456,14 @@ for (i = length-1; i >= 0; i--) {
                     <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                          What sort of businesses do your work with?
+                          What is Zero depreciation cover or bumber to bumber coverage?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                       <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
                         <div class="panel-body px-3 mb-4">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                          <p>In Zero Depreciation coverage even your vehicle is completely damaged, then you don't need to pay any charges and will be eligible for complete claim </p>
         
                         </div>
                       </div>
@@ -458,14 +474,14 @@ for (i = length-1; i >= 0; i--) {
                     <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                          What services does Tirupati Insurance Provide?
+                          What will hapeen When you sale Your Car?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                     <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                       <div class="panel-body px-3 mb-4">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <p>You may cancel the policy or policy can be transferred to the new owner by passing an endorsement .</p>
                       </div>
                     </div>
                     </div>
@@ -475,14 +491,14 @@ for (i = length-1; i >= 0; i--) {
                     <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                          What locations do you service and what are your hours of operation?
+                          Why third party insurance is not enough?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                     <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
                       <div class="panel-body px-3 mb-4">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <p>Third Party insurance covers only other vehicle or property on road its not cover personal accident or damage to your vehicle. But comprehensive insurance covers any damage to you and your vehicle.</p>
                       </div>
                     </div>
                     </div>
@@ -492,14 +508,19 @@ for (i = length-1; i >= 0; i--) {
                     <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-                          What competitive advantage does Tirupati Insurance offer it's clients ?
+                          Factors that helps in deciding your Policy Premium
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                     <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
                       <div class="panel-body px-3 mb-4">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <p>1. IDV(insured Declared value).</p>
+                        <p>2. The age of car</p>
+                        <p>3. City of Registration</p>
+                        <p>4. Cubic capacity of car engine</p>
+                        <p>5. Previous claim. </p>
+
                       </div>
                     </div>
                     </div>
@@ -664,3 +685,57 @@ for (i = length-1; i >= 0; i--) {
 	});
 });
 </script>
+
+
+<script type="text/javascript">
+        var date = document.getElementById('date');
+
+function checkValue(str, max) {
+  if (str.charAt(0) !== '0' || str == '00') {
+    var num = parseInt(str);
+    if (isNaN(num) || num <= 0 || num > max) num = 1;
+    str = num > parseInt(max.toString().charAt(0)) && num.toString().length == 1 ? '0' + num : num.toString();
+  };
+  return str;
+};
+
+date.addEventListener('input', function(e) {
+  this.type = 'text';
+  var input = this.value;
+  if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
+  var values = input.split('/').map(function(v) {
+    return v.replace(/\D/g, '')
+  });
+  if (values[0]) values[0] = checkValue(values[0], 31);
+  if (values[1]) values[1] = checkValue(values[1], 12);
+  var output = values.map(function(v, i) {
+    return v.length == 2 && i < 2 ? v + ' / ' : v;
+  });
+  this.value = output.join('').substr(0, 14);
+});
+
+date.addEventListener('blur', function(e) {
+  this.type = 'text';
+  var input = this.value;
+  var values = input.split('/').map(function(v, i) {
+    return v.replace(/\D/g, '')
+  });
+  var output = '';
+  
+  if (values.length == 3) {
+    var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
+    var month = parseInt(values[0]) - 1;
+    var day = parseInt(values[1]);
+    var d = new Date(year, month, day);
+    if (!isNaN(d)) {
+      document.getElementById('result').innerText = d.toString();
+      var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
+      output = dates.map(function(v) {
+        v = v.toString();
+        return v.length == 1 ? '0' + v : v;
+      }).join(' / ');
+    };
+  };
+  this.value = output;
+});
+    </script>

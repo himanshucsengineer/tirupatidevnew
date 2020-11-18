@@ -33,6 +33,36 @@
                  echo json_encode(array('data'=>$arrya_json));
             }
             
+            
+            public function export(){
+            $file_name = 'Bike_Data'.'.csv';
+            header("Content-Description: File Transfer");
+            header("Content-Disposition: attachment; filename=$file_name");
+            header("Content-Type: application/csv");
+            
+            $getPurchaseData = $this->Bikedatamodel->fetchinventory_api();
+            
+            $file = fopen('php://output','w');
+            
+            $header = array("Sr no","Registration number", "manufacturer", "modal", "variant", "fule type", "registration year", "policy expire", "previous policy", "privious insurer", "email", "mobile number");
+            
+            fputcsv($file, $header);
+            
+            foreach ($getPurchaseData as $key => $value) { 
+                    fputcsv($file, $value);                
+
+                
+            }
+            fclose($file);
+            exit;
+                
+            
+        }
+            
+            
+            
+            
+            
             public function deletebikedetail(){ 
     
                     if($this->input->post('deletesliderId'))

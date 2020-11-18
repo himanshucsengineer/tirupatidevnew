@@ -47,14 +47,22 @@
     <li class="nav-item">
       <a class="nav-link" href="<?php echo base_url(); ?>admin/sociallinks"><i class="fas fa-fw fa-table" ></i><span >Social Links</span></a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/abouts"><i class="fas fa-fw fa-table" ></i><span >About Us</span></a>
-    </li>
+    <!--li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/abouts"><i class="fas fa-fw fa-table" ></i><span >About us</span></a>
+    </li-->
     <li class="nav-item">
       <a class="nav-link" href="<?php echo base_url(); ?>admin/refer"><i class="fas fa-fw fa-table" ></i><span >Refer And Earn</span></a>
     </li>
-
-
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/invitedata"><i class="fas fa-fw fa-table" ></i><span >Invite Friend</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/banktransfer"><i class="fas fa-fw fa-table" ></i><span >Transfer Request</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/user"><i class="fas fa-fw fa-table" ></i><span >Users</span></a>
+    </li>
+    
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
         <i class="fas fa-fw fa-folder" ></i>
@@ -72,7 +80,7 @@
 
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true" aria-controls="collapsePages">
-        <i class="fas fa-fw fa-folder" style="color:white; font-size:1.3rem; hover:red;"></i>
+        <i class="fas fa-fw fa-folder" ></i>
         <span >Bike Insurance</span>
       </a>
       <div id="collapsePage" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
@@ -98,7 +106,15 @@
     <li class="nav-item">
       <a class="nav-link" href="<?php echo base_url(); ?>admin/bikedata"><i class="fas fa-fw fa-table" ></i><span >Bike Ins Data</span></a>
     </li>
-
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/traveldata"><i class="fas fa-fw fa-table" ></i><span >Travel Ins Data</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/termdata"><i class="fas fa-fw fa-table" ></i><span >Term Ins Data</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/careerdata"><i class="fas fa-fw fa-table" ></i><span >Career Data</span></a>
+    </li>
     <li class="nav-item">
       <a class="nav-link" href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table" ></i><span >Contact Data</span></a>
     </li>

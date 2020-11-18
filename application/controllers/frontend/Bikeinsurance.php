@@ -3,7 +3,7 @@
         public function __construct()
     {
         parent::__construct();
-
+$this->load->helper('url','form');
     }
 
 public function index(){
@@ -39,7 +39,32 @@ public function index(){
 public function renewbikeDetails(){
     $this->load->model('frontend/Bikemodel');
    $this->input->post('formSubmit');
+     $this->load->config('email');
+        $this->load->library('email');
+        
+        
+         $from = $this->config->item('smtp_user');
+        $to = 'vikaspoonia17@gmail.com';
+        $subject = "Renew Bike Data";
+        $message = "<p>Registration no: ".$this->input->post('reg')."</p>
+        <p>Company Name: ".$this->input->post('compa')."</p>
+        <p>Fuel Type: ".$this->input->post('fultype')."</p>
+        <p>Registrtion Year: ".$this->input->post('regisyr')."</p>
+        <p>Modal: ".$this->input->post('moda')."</p>
+        <p>Policy Type: ".$this->input->post('pptype')."</p>
+        <p>Varient: ".$this->input->post('varnt')."</p>
+        <p>Policy Expire: ".$this->input->post('pexre')."</p>
+        <p>Policy Insurer: ".$this->input->post('piur')."</p>
+        <p>Email: ".$this->input->post('mail')."</p>
+        <p>Mobile Number: ".$this->input->post('mob')."</p>
+                  ";
 
+        $this->email->set_newline("\r\n");
+        $this->email->from($from);
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
+    
     $this->form_validation->set_rules('reg', 'Registration', 'required');
     $this->form_validation->set_rules('compa', 'Company Name', 'required');
     $this->form_validation->set_rules('fultype', 'Fuel Type', 'required');
@@ -73,7 +98,7 @@ public function renewbikeDetails(){
         
     );
   
-    if($this->Bikemodel->bike_data($data)){
+    if($this->Bikemodel->bike_data($data) && $this->email->send()){
         $this->send($data,$name,"No Refer Code");
         echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
         
@@ -92,6 +117,32 @@ else{
 public function newBike(){
     $this->load->model('frontend/Bikemodel');
     $this->input->post('formSubmit');
+    
+    
+    $this->load->config('email');
+        $this->load->library('email');
+        
+        
+         $from = $this->config->item('smtp_user');
+        $to = 'vikaspoonia17@gmail.com';
+        $subject = "New Bike Data";
+        $message = "<p>Registration no: ".$this->input->post('reg')."</p>
+        <p>Company Name: ".$this->input->post('compa')."</p>
+        <p>Fuel Type: ".$this->input->post('fultype')."</p>
+        <p>Registrtion Year: ".$this->input->post('regisyr')."</p>
+        <p>Modal: ".$this->input->post('moda')."</p>
+        
+        <p>Varient: ".$this->input->post('varnt')."</p>
+      
+        <p>Email: ".$this->input->post('mail')."</p>
+        <p>Mobile Number: ".$this->input->post('mob')."</p>
+                  ";
+
+        $this->email->set_newline("\r\n");
+        $this->email->from($from);
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
 
     $this->form_validation->set_rules('reg', 'Registration', 'required');
     $this->form_validation->set_rules('compa', 'Company Name', 'required');
@@ -118,7 +169,7 @@ public function newBike(){
         
         );
         
-        if($this->Bikemodel->bike_data($data)){
+        if($this->Bikemodel->bike_data($data) && $this->email->send()){
             $this->send($data,$name,$this->input->post('referid'));
             echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
         }

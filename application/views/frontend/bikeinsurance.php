@@ -1,3 +1,15 @@
+<head>
+<meta name = "description" content ="Bike Insurance in Hisar">
+   <meta name = "keywords" content = "Bike insurance in hisar" >
+   <meta name = "robots" content = "index, follow" >
+   <meta name = "title" content = "Best Bike Insurance Agency in Hisar">
+   <title>Bike Insurance</title>
+
+</head>
+
+
+
+
 <?php
 if(isset($_GET["id"]))
 {
@@ -12,7 +24,7 @@ else
    $refer_id="No Refer Id Present";
 }
 ?>
-<h2 class="main_heading">Now Buying Bike Insurance is Much Simpleir</h2>
+<h2 class="main_heading">Get Bike Insurance in Just 5 Minutes</h2>
 <div class="container car">
     <div class="">
         <div class="box_sh ">
@@ -136,9 +148,11 @@ else
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    
                                     <div class="form-group date">
                                         <label class="adults" for="pexpie">Select Policy Expire</label>
-                                        <input type="text" name="pexre" id="my_date_picker"  placeholder="DD-MM-YYYY" class="lis"  required />
+                                        
+                                        <input type="text" name="pexre" id="date" placeholder="DD/MM/YYYY" class=" lis" />
                                         <!--input type="text"  id="my_date_picker" placeholder="DD-MM-YYYY" name="policy_expire" class="lis" readonly required-->
                                     </div>
                                 </div>
@@ -336,7 +350,9 @@ else
 <section class="imp">
     <div class="container">
         <h2>Importance of Bike Insurance</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+        <p>Bikes are considered to be the easiest mode of transportation in short distance, in India bike plays vital role in our daily life routine as we all prefer bikes because they are pocket friendly. But with so many advantages bikes are more prone to many liabilities like theft, damages, accidents, natural calamities etc.
+To ensure that you and your bike is immunised from these liabilities, we at tirupati insurance makes sure that all possible liabilities are covered so that you have a tension free experience with India’s most preferred vehicle. Indian government has made it mandatory to have motor bike insurance so that your life and your asset is safe from any threats on the roads
+. </p>
 
     </div>    
 
@@ -352,14 +368,14 @@ else
             
                     <h4>80% discounts</h4>
                     <hr class="style1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                    <p>We provide insurance deals with upto 80% discount, we analyze the needs of the customers and provide them with best market deals.</p>  
         
                 </div>
                 <div class="point">
                     <img src="<?= base_url();?>assest/img/faster-icon-png-0.png">
                     <h4>UNBIASED EXPERT ADVISE</h4>
                     <hr class="style1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                    <p>We treat our customers as our family hence we do not sell the policies for mere commissions, we give our expert advice after thorough study and comparison of customer’s needs.</p>  
         
                 </div>
           
@@ -370,14 +386,14 @@ else
             
                     <h4>EXPRESS CLAIMS SERVICES</h4>
                     <hr class="style1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                    <p>We make sure that our customers avail all the services they are entitled to. We help them in assisting to clear their claims and receive services in the least time with our expertise.</p>  
         
                 </div>
                 <div class="point">
                     <img src="<?= base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
                     <h4>24*7 CUSTOMER SUPPORT</h4>
                     <hr class="style1">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                    <p>We believe in complete commitment towards best services for our customers. Therefore we are available 24*7 for providing solution for all the queries.</p>  
         
                 </div>
           
@@ -421,14 +437,14 @@ else
                     <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                          What sort of businesses do your work with?
+                         What is the meaning of No Claim Bonus?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                       <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
                         <div class="panel-body px-3 mb-4">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                          <p>It is discount or reward given to you by the company for not raising a claim during policy period. </p>
         
                         </div>
                       </div>
@@ -439,14 +455,14 @@ else
                     <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                          What services does Tirupati Insurance Provide?
+                        Is Bike inspection necessary all the time?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                     <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                       <div class="panel-body px-3 mb-4">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <p>it is not necessary all the time. But if there is any break between your policy expire date and renewal request then you might need an inspection.</p>
                       </div>
                     </div>
                     </div>
@@ -456,14 +472,14 @@ else
                     <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                          What locations do you service and what are your hours of operation?
+                        What does Cashless mean?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                     <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
                       <div class="panel-body px-3 mb-4">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <p>Insurance comapnies have tie-ips with some garages. if you get your bike repaired from these Garages then you need not to worry about payment..</p>
                       </div>
                     </div>
                     </div>
@@ -480,7 +496,7 @@ else
                     <div class="container">
                     <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
                       <div class="panel-body px-3 mb-4">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <p> abore.</p>
                       </div>
                     </div>
                     </div>
@@ -659,4 +675,60 @@ for (i = length-1; i >= 0; i--) {
   select.options[i].remove();
 }
 }
-</script>                
+</script>     
+
+
+
+<script type="text/javascript">
+        var date = document.getElementById('date');
+
+function checkValue(str, max) {
+  if (str.charAt(0) !== '0' || str == '00') {
+    var num = parseInt(str);
+    if (isNaN(num) || num <= 0 || num > max) num = 1;
+    str = num > parseInt(max.toString().charAt(0)) && num.toString().length == 1 ? '0' + num : num.toString();
+  };
+  return str;
+};
+
+date.addEventListener('input', function(e) {
+  this.type = 'text';
+  var input = this.value;
+  if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
+  var values = input.split('/').map(function(v) {
+    return v.replace(/\D/g, '')
+  });
+  if (values[0]) values[0] = checkValue(values[0], 31);
+  if (values[1]) values[1] = checkValue(values[1], 12);
+  var output = values.map(function(v, i) {
+    return v.length == 2 && i < 2 ? v + ' / ' : v;
+  });
+  this.value = output.join('').substr(0, 14);
+});
+
+date.addEventListener('blur', function(e) {
+  this.type = 'text';
+  var input = this.value;
+  var values = input.split('/').map(function(v, i) {
+    return v.replace(/\D/g, '')
+  });
+  var output = '';
+  
+  if (values.length == 3) {
+    var year = values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
+    var month = parseInt(values[0]) - 1;
+    var day = parseInt(values[1]);
+    var d = new Date(year, month, day);
+    if (!isNaN(d)) {
+      document.getElementById('result').innerText = d.toString();
+      var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
+      output = dates.map(function(v) {
+        v = v.toString();
+        return v.length == 1 ? '0' + v : v;
+      }).join(' / ');
+    };
+  };
+  this.value = output;
+});
+    </script>
+

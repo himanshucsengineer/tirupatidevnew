@@ -27,7 +27,17 @@ img {
     transform: scale(2);
     margin-left: 40px;
 }
-
+.buu{
+    width:15rem;
+    color:white !important;
+    background-color:rgb( 239, 69, 84 );
+    border:none;
+    outline:none !important;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    font-size:14px;
+    margin-bottom:1rem;
+}
 .text-primary {
     float: left;
 }
@@ -87,7 +97,16 @@ img {
       </div>
 
 
-
+<form method="post" action="<?php echo base_url();?>admin/healthdata/export">
+        <div class="row" style="margin-bottom:1rem;">
+            <div class=col-md-2>
+                <a href-"export"><button class="buu"><i class="fa fa-download" aria-hidden="true"></i> Export to csv</button>
+                
+            </div>
+            <div class="col-md-10">
+                
+            </div>    
+        </div > 
 
 
         <div class="row">
@@ -95,7 +114,7 @@ img {
 
             <div class="card-box table-responsive">
              
-              <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
+              <table id="lowinventory" data-order='[[ 0, "desc" ]]'  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
                 <tr> 
                     <th style="width: 15%">Number of adults</th>
@@ -118,7 +137,7 @@ img {
           </div>
         </div>
 
-
+</form>
       </div>
     </div>
   </div>
@@ -128,7 +147,7 @@ img {
 
     <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/healthdata/deletemodel'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/healthdata/deletehealthdetail'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -156,7 +175,7 @@ img {
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/healthdata/modeladdinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/healthdata/addinventory_api"
     } );
 
 
@@ -170,3 +189,5 @@ img {
 });
 
   </script>
+
+

@@ -20,13 +20,36 @@
         
         $this->load->model('frontend/Healthmodel');
         $this->input->post('formSubmit');
+        $this->load->config('email');
+        $this->load->library('email');
+       // $refer = '.base_url().'?id='.$_SESSION["referid"].';
+        $from = $this->config->item('smtp_user');
+        $to = 'vikaspoonia17@gmail.com';
+        $subject = "Health Data";
+        $message = "<p>Adult Number: ".$this->input->post('anum')."</p>
+                    <p>kids Number: ".$this->input->post('knum')."</p>
+                    <p>First dob: ".$this->input->post('fdob')."</p>
+                    <p>second dob: ".$this->input->post('sdob')."</p>
+                    <p>Mobile Number: ".$this->input->post('mob')."</p>
+                    <p>Email: ".$this->input->post('mail')."</p>
+                  ";
+
+        $this->email->set_newline("\r\n");
+        $this->email->from($from);
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
+        
+        
+        
+        
         $this->form_validation->set_rules('anum', '', 'required');
         $this->form_validation->set_rules('knum', '', 'required');
         $this->form_validation->set_rules('mob', '', 'required');
         $this->form_validation->set_rules('mail', '', 'required');
-        $this->form_validation->set_rules('fdob', '', 'required');
-        $this->form_validation->set_rules('contact1', '', 'required');
-        $this->form_validation->set_rules('contact2', '', 'required');
+       // $this->form_validation->set_rules('fdob', '', 'required');
+        //$this->form_validation->set_rules('contact1', '', 'required');
+        //$this->form_validation->set_rules('contact2', '', 'required');
 
         if ($this->form_validation->run()){ 
 
@@ -42,7 +65,7 @@
             's_dob' => $this->input->post('sdob')
         );
 
-        if($this->Healthmodel->health_insert($datas)){
+        if($this->Healthmodel->health_insert($datas) && $this->email->send()){
             $this->send($data,$name,$this->input->post('referid'));
             echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
         }

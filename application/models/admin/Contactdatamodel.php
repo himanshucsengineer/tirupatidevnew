@@ -15,14 +15,14 @@ class Contactdatamodel extends CI_Model{
 
         //return $getuser = $this->db->select('*')->from('tbl_subject')->get()->result();
     }*/
-    public function fetchcontact_api() {
+    public function fetchinventory_api() {
         //$deleteid='1';
         //$this->db->where('delete_status',$deleteid);
         $this->db->select('insurance_type.*,contactus.*');
         $this->db->from('contactus');
         $this->db->join('insurance_type','insurance_type.id=contactus.ins','left');
         $query = $this->db->get();
-        return $query->result();
+        return $query->result_array();
 
 
         //return $getuser = $this->db->select('*')->from('tbl_subject')->get()->result();

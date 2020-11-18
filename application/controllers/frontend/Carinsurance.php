@@ -37,6 +37,34 @@
         $this->load->model('frontend/Carmodel');
         $this->input->post('formSubmit');
 
+        $this->load->config('email');
+        $this->load->library('email');
+        
+        
+         $from = $this->config->item('smtp_user');
+        $to = 'vikaspoonia17@gmail.com';
+        $subject = "Renew Car Data";
+        $message = "<p>Registration no: ".$this->input->post('registraion')."</p>
+        <p>Company Name: ".$this->input->post('company')."</p>
+        <p>Fuel Type: ".$this->input->post('fuel_type')."</p>
+        <p>Registrtion Year: ".$this->input->post('regyr')."</p>
+        <p>Modal: ".$this->input->post('modl')."</p>
+        <p>Policy Type: ".$this->input->post('ptypes')."</p>
+        <p>Varient: ".$this->input->post('vari')."</p>
+        <p>Policy Expire: ".$this->input->post('policy_expire')."</p>
+        <p>Policy Insurer: ".$this->input->post('pinsur')."</p>
+        <p>Email: ".$this->input->post('mail')."</p>
+        <p>Mobile Number: ".$this->input->post('mob')."</p>
+                  ";
+
+        $this->email->set_newline("\r\n");
+        $this->email->from($from);
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
+    
+
+
 
         $this->form_validation->set_rules('registraion', 'Registration', 'required');
         $this->form_validation->set_rules('company', 'Company Name', 'required');
@@ -66,7 +94,7 @@
         'mob' => $this->input->post('mob'),
         );
 
-            if($this->Carmodel->car_data($data)){
+            if($this->Carmodel->car_data($data) && $this->email->send()){
                 $this->send($data,$name,"No Refer Code");
                 echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
             }
@@ -85,7 +113,30 @@
     public function newCar(){
         $this->load->model('frontend/Carmodel');
         $this->input->post('formSubmit');
+        $this->load->config('email');
+        $this->load->library('email');
         
+        
+         $from = $this->config->item('smtp_user');
+        $to = 'vikaspoonia17@gmail.com';
+        $subject = "New Car Data";
+        $message = "<p>Registration no: ".$this->input->post('registraion')."</p>
+        <p>Company Name: ".$this->input->post('company')."</p>
+        <p>Fuel Type: ".$this->input->post('fuel_type')."</p>
+        <p>Registrtion Year: ".$this->input->post('regyr')."</p>
+        <p>Modal: ".$this->input->post('model')."</p>
+        
+        <p>Varient: ".$this->input->post('vari')."</p>
+        
+        <p>Email: ".$this->input->post('mail')."</p>
+        <p>Mobile Number: ".$this->input->post('mob')."</p>
+                  ";
+
+        $this->email->set_newline("\r\n");
+        $this->email->from($from);
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($message);
         
         $this->form_validation->set_rules('registraion', 'Registration', 'required');
         $this->form_validation->set_rules('company', 'Company Name', 'required');
@@ -117,7 +168,7 @@
             );
             
             
-            if($this->Carmodel->car_data($data)){
+            if($this->Carmodel->car_data($data) && $this->email->send()){
                 $this->send($data,$name,$this->input->post('referid'));
                 echo "<h6 class='text-success texpirepolr'>Successfully Submited</h6>";
             }

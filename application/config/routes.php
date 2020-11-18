@@ -57,6 +57,11 @@ $route['health-insurance'] = 'frontend/healthinsurance';
 $route['car-insurance'] = 'frontend/carinsurance';
 $route['refer-earn'] = 'frontend/refer';
 $route['bike-insurance'] = 'frontend/bikeinsurance';
+$route['term-insurance'] = 'frontend/term';
+$route['travel-insurance'] = 'frontend/travel';
+$route['blog'] = 'frontend/blog';
+$route['career'] = 'frontend/career';
+$route['sitemap'] = 'frontend/sitemap';
 
 $route['default_controller/login'] = 'login';
 // $route['car-insurance'] = 'frontend/carinsurance';

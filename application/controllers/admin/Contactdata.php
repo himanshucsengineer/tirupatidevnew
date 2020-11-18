@@ -17,20 +17,50 @@
                 $this->load->view('admin/template/footer');
             }
             
-            public function contactinventory_api(){
+            public function addinventory_api(){
     
-                $getPurchaseData = $this->Contactdatamodel->fetchcontact_api();
+                $getPurchaseData = $this->Contactdatamodel->fetchinventory_api();
         
                 //print_r($getPurchaseData);
         
                 foreach ($getPurchaseData as $key => $value) { 
     //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
         
-                    $arrya_json[] = array($value->name,$value->email,$value->tel,$value->ins_pack,$value->insurance,$value->text,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-                   <a class="delete_sliders" data-id="'.$value->id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
-                    }
-                     echo json_encode(array('data'=>$arrya_json));
+        $arrya_json[] = array($value['name'],$value['email'],$value['tel'],$value['ins_pack'],$value['insurance'],$value['text'],'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value['id'].'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+               <a class="delete_sliders" data-id="'.$value['id'].'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
                 }
+                 echo json_encode(array('data'=>$arrya_json));
+        
+        
+                
+                }
+                
+                
+                public function export(){
+            $file_name = 'Contact_Data'.'.csv';
+            header("Content-Description: File Transfer");
+            header("Content-Disposition: attachment; filename=$file_name");
+            header("Content-Type: application/csv");
+            
+            $getPurchaseData = $this->Contactdatamodel->fetchinventory_api();
+            
+            $file = fopen('php://output','w');
+            
+            $header = array("Sr no.", "Name", "Email", "Telephone", "Insurance pack", "insurance", "text");
+            
+            fputcsv($file, $header);
+            
+            foreach ($getPurchaseData as $key => $value) { 
+                    fputcsv($file, $value);                
+
+                
+            }
+            fclose($file);
+            exit;
+                
+            
+        }
+                
                 
                 public function deletecontactdetail(){ 
         

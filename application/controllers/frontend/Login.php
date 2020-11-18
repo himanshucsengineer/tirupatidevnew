@@ -28,19 +28,28 @@
                 {
                     $_SESSION["email"]=$value["email"];
                     $_SESSION["name"]=$value["name"];
+                    $_SESSION["number"]=$value["number"];
+                    $_SESSION["addrs"]=$value["addrs"];
                     $_SESSION["ref_count"]=$value["ref_count"];
                     $_SESSION["earn"]=$value["earn"];
                     $_SESSION["referid"]=$value["referid"];
                     $_SESSION["bank_acc"]=$value["bank_acc"];
                     $_SESSION["ifsc"]=$value["ifsc"];
                     $_SESSION["acc_name"]=$value["acc_name"];
+                    $_SESSION["amount"]=$value["amount"];
                     $login_success=1;
                     break;
                 }
             }
             if($login_success==1){
-                // $this->session->set_flashdata('success','Logged In Successfully'); 
-                redirect($url); 
+                
+                if($url == "https://tirupatiinsurance.com/refer-earn"){
+                    redirect($url); 
+                }else{
+                    redirect(base_url().'frontend/user/dashboard');
+                }
+                
+                
             }
             else{
                 $this->session->set_flashdata('error','Wrong Username Or Password'); 
@@ -87,26 +96,63 @@
 
     }
     
-    public function update_bank(){
+    
+    public function update_pro(){
+        $this->load->model('frontend/ReferandEarnmodel');
+        
+        $this->input->post('formSubmit');
+
+            
+            $this->form_validation->set_rules('name', 'Name', 'required');
+            $this->form_validation->set_rules('mail', 'Email', 'required');
+            $this->form_validation->set_rules('mob', 'Number', 'required');
+            $this->form_validation->set_rules('add', 'Address', 'required');
+            if ($this->form_validation->run()){ 
+               
+               $name = $this->input->post('name');
+                        $email = $this->input->post('mail');
+                        $number = $this->input->post('mob');
+                        $addrs = $this->input->post('add');
+                        
+                
+                    if($this->ReferandEarnmodel->update_pro($name,$number,$email,$addrs)){
+                        
+                        
+                        $_SESSION["name"]=$this->input->post('name');
+                        $_SESSION["email"]=$this->input->post('mail');
+                        $_SESSION["number"]=$this->input->post('mob');
+                        $_SESSION["addrs"]=$this->input->post('add');
+                        $this->session->set_flashdata('dashboard_error','Updated Successfully'); 
+                        redirect(base_url().'frontend/user/dashboard');  
+                    }
+                    else{
+                        $this->session->set_flashdata('dashboard_error','Error In Bank Details'); 
+                        redirect(base_url().'frontend/user/dashboard'); 
+                    }
+                }
+                else{
+                    $this->session->set_flashdata('dashboard_error','Please Fill all Fields'); 
+                    redirect(base_url().'frontend/user/dashboard');   
+                }
+       
+}
+
+public function update_bank(){
         $this->load->model('frontend/ReferandEarnmodel');
         $this->input->post('formSubmit');
 
-            if($this->input->post('bank_acc')!=$this->input->post('cbank_acc'))
-            {
-                $this->session->set_flashdata('dashboard_error','Account number  Not Matching'); 
-                redirect(base_url().'frontend/user/dashboard'); 
-                return 0; 
-            }
+             $email=$_SESSION["email"];
             $this->form_validation->set_rules('bank_acc', 'Account No', 'required');
+           // $this->form_validation->set_rules('cbank_acc', 'Account No', 'required');
             $this->form_validation->set_rules('ifsc', 'IFSC Code', 'required');
             $this->form_validation->set_rules('acc_name', 'Account Holder Name', 'required');
             if ($this->form_validation->run()){ 
-                $data = array(
-                        'bank_acc' => $this->input->post('bank_acc'),
-                        'ifsc' => $this->input->post('ifsc'),
-                        'acc_name' => $this->input->post('acc_name'),
-                    );
-                    if($this->ReferandEarnmodel->update_bank($data,"Paragikjain786@gmail.com")){
+             
+                    $bank_acc = $this->input->post('bank_acc');
+                        $ifsc = $this->input->post('ifsc');
+                        $acc_name = $this->input->post('acc_name');
+                        
+                    if($this->ReferandEarnmodel->update_bank($bank_acc,$ifsc,$acc_name,$email)){
                         $_SESSION["bank_acc"]=$this->input->post('bank_acc');
                         $_SESSION["ifsc"]=$this->input->post('ifsc');
                         $_SESSION["acc_name"]=$this->input->post('acc_name');
@@ -124,6 +170,9 @@
                 }
        
 }
+
+
+
 
     }
 

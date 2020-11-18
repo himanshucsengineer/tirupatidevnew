@@ -1,3 +1,8 @@
+<title>Tirupati insurance- User Dashboard</title>
+
+
+
+
 <?php 
 if(!isset($_SESSION["referid"]))
 {
@@ -5,11 +10,11 @@ echo "<script>window.location.href='/insurance/';</script>";
 }
 else
 {
-  $earning=$_SESSION["ref_count"];
-  $click=$_SESSION["earn"];
-  $bank_acc=$_SESSION["bank_acc"];
-  $ifsc=$_SESSION["ifsc"];
-  $acc_name=$_SESSION["acc_name"];
+  $name=$_SESSION["name"];
+  $email=$_SESSION["email"];
+  $number=$_SESSION["number"];
+  $addrs=$_SESSION["addrs"];
+  
 }
 ?>
 <style>
@@ -20,7 +25,7 @@ else
 .dash{
   width: 100%;
   height: auto;
-  margin-top: 20px;
+  
 }
 .tab {
  
@@ -134,8 +139,252 @@ else
   font-size: 18px;
   
 }
+
+
+.dashbo{
+    width:100%;
+    height:auto;
+    padding-top:2rem;
+    padding-bottom:2rem;
+    background-color:#fdfdfd;
+}
+
+.dashbo h3{
+    width:100%;
+    height:auto;
+    font-weight:400;
+    color: rgb( 239, 69, 84 );
+    font-family: "Roboto";
+}
+.dashbo .style1{
+    border-top:2px solid #cdcdcd;
+}
+.dashbo .cod{
+    margin-top:2rem;
+}
+.dashbo h5{
+    width:100%;
+    height:auto;
+    font-weight:400;
+    color: rgb( 127, 127, 127 );
+    font-family: "Roboto";
+}
+.dashbo input[type=text], input[type=email], input[type=number]{
+    width:100%;
+    height:auto;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    padding-left:1rem;
+    margin-bottom:1rem;
+    border:1px solid #cdcdcd;
+    outline:none;
+}
+.dashbo .ttt{
+    width:100%;
+    height:auto;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    padding-left:1rem;
+    margin-bottom:1rem;
+    border:1px solid #cdcdcd;
+    outline:none !important;
+}
+.dashbo button{
+    
+    width:8rem;
+    height:auto;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    border:none;
+    outline:none;
+    color:white;
+    background-color:rgb( 239, 69, 84 );
+    transition:.5s;
+}
+.dashbo button:hover{
+    
+    
+    background-color:rgb( 95, 96, 96 );
+}
+.dashbo .butt{
+    
+    width:8rem;
+    height:auto;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    border:none;
+    outline:none;
+    color:white;
+    background-color:rgb( 239, 69, 84 );
+    transition:.5s;
+    border-radius:0px !important;
+}
+.dashbo .butt:hover{
+    
+    
+    background-color:rgb( 95, 96, 96 );
+}
+.dashbo .copy{
+    
+    width:8rem;
+    height:auto;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    border:none;
+    outline:none;
+    border-radius:0px !important;
+    color:white;
+    background-color:rgb( 239, 69, 84 );
+    transition:.5s;
+}
+.dashbo .copy:hover{
+    
+    
+    background-color:rgb( 95, 96, 96 );
+}
 </style>
-<div class="dash">
+<?php
+if(!isset($_SESSION["referid"]))
+{
+    $button='<input type="submit" name="formSubmit" onclick="openLoginModal();" value="Genrate Link" class="bu" />';
+}
+else
+{
+    $button='<input class="lis" type="text" id="copy" value="'.base_url().'?id='.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder=" " readonly></br>
+    ';
+}
+?>
+<?php
+if(!isset($_SESSION["referid"]))
+{
+    $button1='<input type="submit" name="formSubmit" onclick="openLoginModal();" value="Genrate Link" class="bu" />';
+}
+else
+{
+    $button1=' <input type="submit" id="copied" value="Copy Link" class="copy"  />';
+}
+?>
+<?php
+        if($this->session->flashdata('success'))
+        {
+            echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+        }
+        else if($this->session->flashdata('error'))
+        {
+            echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+        }
+        ?>
+        
+     
+<div class="dashbo">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            
+        </div>
+        <div class="col-md-10">
+            <div class="container">
+            <h3>Refer and Earn:</h3>
+            <hr class="style1">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Referral Code:</h5>
+                </div>
+                <div class="col-md-6">
+                    <?php echo $button; ?>
+                    
+                </div> 
+                <div class="col-md-3">
+                    <?php echo $button1; ?>
+                </div>    
+            </div>  
+            <h3 style="margin-top:2rem;">My Profile:</h3>
+            <hr class="style1">
+            
+            <form action="../login/update_pro" method="Post">
+                
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Name:*</h5>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="name" placeholder="Name" value="<?php echo $name;?>">
+                    
+                </div>   
+                <div class="col-md-3">
+                    
+                </div> 
+            </div> 
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Email Address:*</h5>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" name="mail" placeholder="email" value="<?php echo $email;?>"readonly>
+                    
+                </div>  
+                <div class="col-md-3">
+                   
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Mobile number:*</h5>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" name="mob" placeholder="number" value="<?php echo $number;?>">
+                    
+                </div>  
+                <div class="col-md-3">
+                    
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Residential Adress:*</h5>
+                </div>
+                <div class="col-md-6">
+                    <textarea class=" ttt" name="add" rows="5" id="comment" value="<?php echo $addrs;?>"></textarea>
+                    
+                </div>  
+                <div class="col-md-3">
+                   
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-6">
+                    <input type="submit" name="formSubmit" class="butt" value="Update">
+                    
+                </div>  
+                <div class="col-md-3">
+                   
+                </div> 
+            </div>
+            </form>
+        </div> 
+        </div>
+    </div>    
+    </div>
+</div >
+
+<script>
+        $( '#copied' ).click( function()
+ {
+    var copyText = document.getElementById("copy");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+ });
+    </script>
+
+
+
+
+<!--div class="dash">
   <div class="container">
   <div class="row">
 
@@ -150,12 +399,12 @@ else
 
     <div class="col-md-10" style="padding: 0px;">
       <div id="profile" class="tabcontent ">
-        <!-- <div class="card">
+        <<div class="card">
           <div class="card-header">
               <h4>Your Profile</h4>
-          </div> -->
-          <!-- <div class="card-body">
-
+          </div>
+          < <div class="card-body">
+    
             <div class="row">
                 <div class="col-md-6">
                   <label for="name">Name:</label>
@@ -173,11 +422,11 @@ else
 
             <button>Update Profile</button>
             
-            
+           </form> 
             
           </div>
-        </div> -->
-        <!-- <div class="card">
+        </div>
+        <<div class="card">
           <div class="card-header">
               <h4>Change Password</h4>
           </div>
@@ -199,7 +448,7 @@ else
             
             
           </div>
-        </div> -->
+        </div>>
 
         <div class="card">
           <div class="card-header">
@@ -366,4 +615,4 @@ function openCity(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-</script>
+</script-->

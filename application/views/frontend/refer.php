@@ -1,3 +1,15 @@
+<head>
+<meta name = "description" content ="Now Earn Upto 50,000 per month by just recommending you friend to us for thier insurance Needs">
+   <meta name = "keywords" content = "Refer and Earn" >
+   <meta name = "robots" content =" index, follow" >
+   <title>Refer and Earn</title>
+
+</head>
+
+
+
+
+
 
 <style>
     .step{
@@ -63,10 +75,14 @@ if(!isset($_SESSION["referid"]))
 }
 else
 {
-    $button='<input class="lis" type="text" id="copy" value="'.base_url().'?id='.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder=" " disabled></br>
+    $button='<input class="lis" type="text" id="copy" value="'.base_url().'?id='.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder=" " readonly></br>
     <input type="submit" id="copied" value="Copy Link" class="bu"  />';
 }
 ?>
+
+
+
+
 
 
 <?php
@@ -90,12 +106,43 @@ if(!isset($_SESSION["referid"]))
 else
 {
     $wha='<a href="https://api.whatsapp.com/send?text=Hi! I tried Tirupati insurance, here are my thoughts so far. Good experience center, wide range of products. If you want to try them, you can register at '.base_url().'?id='.$_SESSION["referid"].'  they will call you back and take it forward." class="fa fa-whatsapp" data-action="share/whatsapp/share" target="_blank"></a>';
-    $fb='<a href="https://www.facebook.com/sharer.php?text=[ Hi! I tried Tirupati insurance, here are my thoughts so far. Good experience center, wide range of products. If you want to try them, you can register at '.base_url().'?id='.$_SESSION["referid"].'  they will call you back and take it forward.  ]" class="fa fa-facebook" data-action="share/facebook/share" target="_blank"></a>';
+    $fb='<a href="https://www.facebook.com/share.php?text=[Hi! I tried Tirupati insurance, here are my thoughts so far. Good experience center, wide range of products. If you want to try them, you can register at '.base_url().'?id='.$_SESSION["referid"].'  they will call you back and take it forward.  ]" class="fa fa-facebook" data-action="share/facebook/share" target="_blank"></a>';
     $twi='<a href="http://twitter.com/share?text=[Hi! I tried Tirupati insurance, here are my thoughts so far. Good experience center, wide range of products. If you want to try them, you can register at '.base_url().'?id='.$_SESSION["referid"].'  they will call you back and take it forward.]&url=[https://tirupatiinsurance.com/]" class="fa fa-twitter" data-action="share/twitter/share" target="_blank"></a>';
 }
 ?>
+<?php
+if(isset($_GET["id"]))
+{
+   $refer_id=$_GET["id"];
+   setcookie('referid',$_GET["id"],time() + (86400 * 30), "/");
+}
+else if(isset($_COOKIE['referid'])){
+    $refer_id=$_COOKIE['referid'];
+}
+else
+{
+   $refer_id="No Refer Id Present";
+}
+?>
+
+
+<?php
+if(!isset($_SESSION["referid"]))
+{
+    $button5='<input type="button"  onclick="openLoginModal();" value="Send Invite" class="bu" />';
+}
+else
+{
+    $button5='<input type="submit" name="formSubmit" value="Send Invite" class="bu"  />';
+}
+?>
+
+
+
+
         <div class="refer-top" style="background-image: url(<?php echo base_url();?>assest/img/refer.jpg)">
-            
+           
+                                
             <div class="overlay2">
                 <div class="container" >
                     <h2>Good Friends Share!</h2>
@@ -106,22 +153,23 @@ else
                     <div class="row">
                           
                         <div class="col-lg-6 col-xs-12" style="padding-right: 20px;">
-                            <h5>If you have someone particular in mind...</h5>
-                            <div class="group-form">
-                                <div class="screen-reader-response" aria-live="polite"></div>
-                                <form action="#" method="post" >
-                                    <input class="lis" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Your Friend's Name " required></br>
-                                    <input class="lis" type="email" name="email" value="" size="40"  placeholder="Your Friend's Mail" required></br>
-                                    <input class="lis" type="tel" name="tel-331" value="" size="40" aria-invalid="false" placeholder="Your Friend's Phone Number" required></br>
+                            <h5>Fill your Friend or Recommended Person Detail Here...</h5>
+                            <div class="">
+                               
+                                <?php echo form_open(base_url( 'frontend/refer/invite'), array('id'=>'inviteform','method'=>'POST'));?>
+
+                                    <input class="lis" type="text" name="fname"    placeholder="Your Friend's Name " ></br>
+                                    <input class="lis" type="email" name="fmail" id="to"   placeholder="Your Friend's Mail"></br>
+                                    <input class="lis" type="number" name="fmob"    placeholder="Your Friend's Phone Number" ></br>
                                     
-                                    <input class="lis" type="text" name="city" value="" size="40" aria-invalid="false" placeholder="Enter City" required></br>
-                                    <input class="lis" type="tel" name="text-677" value="" size="40" aria-invalid="false" placeholder="Your Phone" required></br>
-                                    <input type="submit" value="Send Invite" class="bu"  />
-                                </form>    
+                                    <input class="lis" type="text" name="city"   placeholder="Enter City"></br>
+                                    <input class="lis" type="number" name="cnum"  placeholder="Your Phone" ></br>
+                                    <?php echo $button5; ?>
+                                <?php echo form_close(); ?>
                             </div>
                         </div>
                    
-                            
+                          
                      
                         <div class="col-lg-6 col-xs-12">
                             
@@ -199,14 +247,14 @@ else
                     <div class="panel-heading p-3 mb-3 " style="border-bottom: 1px solid grey; border-radius:0px;" role="tab" id="heading0">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
-                          When am i eligible for getting the referral bouns?
+                          When am i eligible for getting the referral bonus?
                         </a> 
                       </h3>
                     </div>
                     <div class="container">
                       <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
                         <div class="panel-body px-3 mb-4">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
+                          <p>Once your recommended person policy get matured you can see your referral bonus in your account under wallet tab. </p>
         
                         </div>
                       </div>
@@ -217,14 +265,14 @@ else
                     <div class="panel-heading p-3 mb-3" style="border-bottom: 1px solid grey; border-radius:0px;" role="tab" id="heading1">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                            How will i get my referral bouns?
+                            How will i get my referral bonus?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                     <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
                       <div class="panel-body px-3 mb-4">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                        <p>Once your referral bonus reached 2000 you can request for withdrawal in your Bank or adjust against existing order.</p>
                       </div>
                     </div>
                     </div>
@@ -236,7 +284,7 @@ else
                 </div>
               </div>
             </div>
-            <div class="modal" id="myModal">
+           <div class="modal" id="myModal">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <!-- Modal Header -->
@@ -272,7 +320,7 @@ else
               </div>
             </div>
 </section>
- </div>
+</div>
     <script>
         $( '#copied' ).click( function()
  {
@@ -283,3 +331,24 @@ else
   alert("Copied the text: " + copyText.value);
  });
     </script>
+    
+    
+    <script>
+    $("#inviteform").submit(function(event){
+	event.preventDefault();
+	var post_url = $(this).attr("action"); 
+	var request_method = $(this).attr("method"); 
+	var form_data = $(this).serialize(); 
+	
+	$.ajax({
+		url : post_url,
+		type: request_method,
+		data : form_data,
+	}).done(function(response){ //
+        console.log(response);
+        $('#validation').html(response);
+        $('#myModal').modal('show').fadeIn('slow');
+        $("#inviteform").trigger("reset");
+	});
+});
+</script>

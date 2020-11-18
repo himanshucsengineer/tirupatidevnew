@@ -13,12 +13,82 @@ else{
   '.$_SESSION["name"].'
   </a>
   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    <a class="dropdown-item" href="'.base_url().'/frontend/user/dashboard">Dashboard</a>
+    <a class="dropdown-item" href="'.base_url().'frontend/user/dashboard">Dashboard</a>
     <a class="dropdown-item" href="'.base_url().'frontend/logout">Log Out</a>
   </div>
 </li>   '; 
 }
 ?>
+
+
+
+
+
+<style>
+@media only screen and (max-width: 600px) {
+    .dropdown-menu {
+        border:none !important;
+ 
+            background-color: transparent !important;
+            min-width: 160px;
+         box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2) !important;
+            padding: 12px 16px;
+            margin-bottom:1rem !important;
+  
+}
+.dropdown-menu button{
+    text-align:left !important;
+}
+  }
+
+.dropdown-menu {
+ border:1px solid #cdcdcd;
+ 
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  
+  
+}
+.dropdown-menu button{
+    width:100%;
+    height:auto;
+    padding-top:.5rem;
+    padding-bottom:.5rem;
+    color:rgb( 95, 96, 96 );
+    outline:none;
+    border-bottom:1px solid #cdcdcd;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    transition:.5s;
+    background-color:transparent;
+    margin-top:0px !important;
+    margin-bottom:0px !important;
+}
+.dropdown-menu button:hover{
+    
+    color:rgb( 239, 69, 84 );
+   
+    border-bottom:1px solid rgb( 239, 69, 84 );
+  
+  
+}
+.dropdown-menu a{
+  width:100%;
+  height:auto;
+  font-size:17px;
+  font-weight:400;
+  text-transform:uppercase;
+  color:rgb( 95, 96, 96 );
+  text-decoration:none;
+  transition:.5s;
+}
+.dropdown-menu a:hover{
+ color:rgb( 239, 69, 84 );
+}
+
+</style>
 <body>
     <nav class="top-nav">
       <div class="container">
@@ -100,7 +170,7 @@ else{
 
 
                           <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
-                            <ul id="nav" class="navbar-nav ml-auto ">
+                            <ul id="nav" class="navbar-nav ml-auto " style="float:left;">
                             <li   class="  nav-item m-1 brk ">
                                 |
                               </li>
@@ -120,16 +190,28 @@ else{
                               <li   class="  nav-item m-1 brk ">
                                 |
                               </li>
-                              <li class=" nav-item">
-                                <a title="Services & solutions" href="<?php echo base_url(); ?>frontend/service" class="nav-link">
-                                Services & solutions
+                              
+                             
+                              
+                              <li class="nav-item dropdown">
+                                <a class="nav-link " title="Services & solutions" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Services & solutions
                                 </a>
-                              </li>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a  href="<?php echo base_url()?>health-insurance"><button>Health Insurance</button></a>
+                                    <a  href="<?php echo base_url(); ?>term-insurance"><button>Term Insurance</button></a>
+                                    <a href="<?php echo base_url();?>car-insurance"><button>Car Insurance</button></a>
+                                    <a  href="<?php echo base_url()?>bike-insurance"><button>Bike Insurance</button></a>
+                                    <a href="<?php echo base_url(); ?>travel-insurance"><button>Travel Insurance</button></a>
+                                    
+                                </div>
+                            </li>
+                              
                               <li   class="  nav-item m-1 brk ">
                                 |
                               </li>
                               <li class=" nav-item">
-                                <a title="Blogs" href="<?php echo base_url(); ?>frontend/blog" class="nav-link">
+                                <a title="Blogs" href="<?php echo base_url(); ?>blog" class="nav-link">
                                Blogs
                                 </a>
                               </li>
@@ -137,7 +219,7 @@ else{
                                 |
                               </li>
                               <li class=" nav-item ">
-                                <a title="career" href="<?php echo base_url(); ?>frontend/career" class="nav-link">
+                                <a title="career" href="<?php echo base_url(); ?>career" class="nav-link">
                                 careers
                                 </a>
                               </li>
